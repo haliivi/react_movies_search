@@ -1,7 +1,8 @@
 import React from 'react';
-import {Search} from '../components/Search'
+// import {Search} from '../components/Search'
+import {SearchFunction} from '../components/SearchFunction';
 import {Movies} from '../components/Movies'
-import { Preloader } from '../components/Preloader'
+import {Preloader} from '../components/Preloader'
 
 const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -39,7 +40,8 @@ class Main extends React.Component {
         const {movies, loading} = this.state;
         return (
             <main className="container content">
-                <Search searchMovies={this.searchMovies} />
+                {/* <Search searchMovies={this.searchMovies} /> */}
+                <SearchFunction searchMovies={this.searchMovies} />
                 {
                     loading ? (
                         <Preloader />
